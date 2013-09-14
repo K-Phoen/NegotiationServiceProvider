@@ -1,4 +1,4 @@
-NegotiationServiceProvider
+NegotiationServiceProvider [![Build Status](https://travis-ci.org/K-Phoen/NegotiationServiceProvider.png?branch=master)](https://travis-ci.org/K-Phoen/NegotiationServiceProvider)
 ==========================
 
 A [Negotiation](https://github.com/willdurand/Negotiation/) service provider for [Silex](http://silex.sensiolabs.org/).
