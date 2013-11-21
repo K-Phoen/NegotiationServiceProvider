@@ -25,7 +25,7 @@ class NegotiationServiceProvider implements ServiceProviderInterface
     /**
      * Constructor.
      *
-     * @param array $customFormats  A list of custorm formats to add in the
+     * @param array $customFormats A list of custorm formats to add in the
      *                              format negotiator. The formats must be
      *                              given as a 'formatName' => mimeTypes map.
      */
@@ -43,15 +43,15 @@ class NegotiationServiceProvider implements ServiceProviderInterface
     {
         $this->app = $app;
 
-        $app['negotiator'] = $app->share(function($app) {
+        $app['negotiator'] = $app->share(function ($app) {
             return new \Negotiation\Negotiator();
         });
 
-        $app['language.negotiator'] = $app->share(function($app) {
+        $app['language.negotiator'] = $app->share(function ($app) {
             return new \Negotiation\LanguageNegotiator();
         });
 
-        $app['format.negotiator'] = $app->share(function($app) {
+        $app['format.negotiator'] = $app->share(function ($app) {
             $negotiator = new \Negotiation\FormatNegotiator();
 
             // add new formats
