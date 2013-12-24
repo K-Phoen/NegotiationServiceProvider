@@ -56,7 +56,7 @@ class NegotiationServiceProvider implements ServiceProviderInterface
 
             // add new formats
             foreach ($this->customFormats as $name => $mimeTypes) {
-                $negotiator->registerFormat($name, $mimeTypes);
+                $negotiator->registerFormat($name, $mimeTypes, true);
             }
 
             return $negotiator;
