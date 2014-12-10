@@ -51,11 +51,13 @@ class NegotiationServiceProvider implements ServiceProviderInterface
             return new \Negotiation\LanguageNegotiator();
         });
 
-        $app['format.negotiator'] = $app->share(function ($app) {
+        $customFormats = $this->customFormats;
+
+        $app['format.negotiator'] = $app->share(function ($app) use($customFormats) {
             $negotiator = new \Negotiation\FormatNegotiator();
 
             // add new formats
-            foreach ($this->customFormats as $name => $mimeTypes) {
+            foreach ($customFormats as $name => $mimeTypes) {
                 $negotiator->registerFormat($name, $mimeTypes, true);
             }
 
