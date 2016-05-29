@@ -3,6 +3,11 @@ NegotiationServiceProvider [![Build Status](https://travis-ci.org/K-Phoen/Negoti
 
 A [Negotiation](https://github.com/willdurand/Negotiation/) service provider for [Silex](http://silex.sensiolabs.org/).
 
+## Status
+
+This project is **DEPRECATED** and should NOT be used. 
+
+If someone magically appears and wants to maintain this project, I'll gladly give access to this repository.
 
 ## Usage
 
